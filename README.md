@@ -9,7 +9,7 @@ you want to see there as a list, like national monuments, tourist attractions et
 
 ### Problem Space
 
-Our networks of riends and family are distributed all over the world today. It is hard to keep track of in your brain. This app will help you keep track of who you know where. It doubles as a travel bucketlist for things you can do when/if you visit them.
+Our networks of friends and family are distributed all over the world today. It is hard to keep track of in your brain. This app will help you keep track of who you know where. It doubles as a travel bucketlist for things you can do when/if you visit them.
 
 ### User Profile
 
