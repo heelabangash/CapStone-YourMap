@@ -22,9 +22,13 @@ TBD
 ### Features
 
 -A map or globe visual with capabilities to select continents, countries, and cities. This may involve a zoom feature.
+
 -Lists associated with continents, countries, and cities.
+
 -Persistent storage.
+
 -Also see User Profile for Sonia.
+
 
 ## Implementation
 
