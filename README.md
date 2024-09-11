@@ -49,7 +49,7 @@ API for potential top visited tourist attractions. (Needs research)
 
 ### Sitemap
 
-Welcome/Login - Spalsh page, welcome. Option to login.
+Welcome/Login - Splash page, welcome. Option to login.
 
 Map page - a visual view of your map, where you can select, continents, countries, or cities.
 
@@ -59,7 +59,7 @@ List - List group related to continent, country city.
 
 ### Mockups
 
-TBD
+TBD - Need to upload paper drawings.
 Provide visuals of your app's screens. You can use pictures of hand-drawn sketches, or wireframing tools like Figma.
 
 ### Data
@@ -83,3 +83,4 @@ Scope your project as a sprint. Break down the tasks that will need to be comple
 ## Future Implementations
 
 Implement suggestions for what you can do in each location, with drag and drop or add to + capability to your lists.
+Implement being able to share lists across users.
