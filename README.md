@@ -60,6 +60,7 @@ Your lists - A list of all your lists, searchable, by continent, country, city.
 List - List group related to continent, country city.
 
 ### Mockups
+![Mockup-v1](https://github.com/user-attachments/assets/c234ccc2-c6f6-4e39-a3cd-cfe25d3ed1fb)
 
 TBD - Need to upload paper drawings.
 Provide visuals of your app's screens. You can use pictures of hand-drawn sketches, or wireframing tools like Figma.
