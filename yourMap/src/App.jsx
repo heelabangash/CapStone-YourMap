@@ -36,7 +36,8 @@ function App() {
 		console.log(geo.id);
 		console.log(geo.properties.name);
 		console.log(geo.geometry.coordinates);
-		setCurrentCountry(geo.id);
+		setCurrentCountry(geo.properties.name);
+		// alert(geo.properties.name);
 	};
 
 	return (
@@ -49,25 +50,20 @@ function App() {
 					<img src={reactLogo} className="logo react" alt="React logo" />
 				</a>
 			</div>
-			<h1>Vite + React</h1>
+			<h1 className="logo">yourMap</h1>
 			<div className="card">
-				<button onClick={() => setCount((count) => count + 1)}>
-					count is {count}
+				<button onClick={() => setCurrentCountry("")}>
+					{currentCountry ? `You're in ${currentCountry}!` : "Welcome!"}
 				</button>
-				<p>
-					Edit <code>src/App.jsx</code> and save to test HMR
-				</p>
 			</div>
-			<p className="read-the-docs">
-				Click on the Vite and React logos to learn more
-			</p>
+
 			<ComposableMap
 				className="map-container"
-				projectionConfig={{
-					// rotate: [-10.0, -52.0, 0],
-					center: [2, 46],
-					scale: 1100,
-				}}
+				// projectionConfig={{
+				// 	// rotate: [-10.0, -52.0, 0],
+				// 	center: [2, 46],
+				// 	scale: 1100,
+				// }}
 			>
 				{/* {console.log("something")} */}
 				<Geographies className="map" geography="/features.json">
@@ -77,7 +73,11 @@ function App() {
 								// <div key={geo.rsmKey}>
 								// console.log(geo.rsmKey) || (
 								<Geography
-									className={geo.id == currentCountry ? "--active" : "country"}
+									className={
+										geo.properties.name == currentCountry
+											? "--active"
+											: "country"
+									}
 									key={geo.rsmKey}
 									geography={geo}
 									fill="#F6F0E9"
