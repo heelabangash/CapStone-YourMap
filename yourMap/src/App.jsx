@@ -59,11 +59,13 @@ function App() {
 
 			<ComposableMap
 				className="map-container"
-				// projectionConfig={{
-				// 	// rotate: [-10.0, -52.0, 0],
-				// 	center: [2, 46],
-				// 	scale: 1100,
-				// }}
+				projectionConfig={
+					{
+						// rotate: [-10.0, -52.0, 0],
+						// center: [2, 46],
+						// scale: 1100,
+					}
+				}
 			>
 				{/* {console.log("something")} */}
 				<Geographies className="map" geography="/features.json">
