@@ -3,7 +3,6 @@ import "./Map.scss";
 import {
 	ComposableMap,
 	Geographies,
-	Annotation,
 	Geography,
 	ZoomableGroup,
 } from "react-simple-maps";
@@ -28,17 +27,15 @@ function Map({ currentCountry, setCurrentCountry }) {
 		center: [18, 10],
 		zoom: 1.7,
 	});
-	const [people, selectPeople] = useState(["Alicia, Katarina, Tami"]);
-	const [flag, setFlag] = useState(false);
 	const selectCountry = (geo) => {
 		setCurrentCountry(geo.properties.name);
-		flag
-			? selectPeople(["Justin, Henry, Emma"])
-			: selectPeople(["Jenani, Mingxia, Heela"]);
-		setFlag(!flag);
-		if (geo.id == "BRA" || geo.id == "AUS") {
-			selectPeople(["none"]);
-		}
+		// flag
+		// 	? selectPeople(["Justin, Henry, Emma"])
+		// 	: selectPeople(["Jenani, Mingxia, Heela"]);
+		// setFlag(!flag);
+		// if (geo.id == "BRA" || geo.id == "AUS") {
+		// 	selectPeople(["none"]);
+		// }
 	};
 	const showCountry = (geo) => setHoverCountry(geo.properties.name);
 	const hideCountry = () => setHoverCountry("");
@@ -90,7 +87,6 @@ function Map({ currentCountry, setCurrentCountry }) {
 						center={coord.center}
 						zoom={coord.zoom}
 						onMoveEnd={({ coordinates, zoom }) => {
-							console.log(coordinates, zoom);
 							setCoord({ center: coordinates, zoom: zoom });
 						}}
 					>
@@ -115,21 +111,6 @@ function Map({ currentCountry, setCurrentCountry }) {
 						</Geographies>
 					</ZoomableGroup>
 				</ComposableMap>
-			</div>
-			{people[0] == "none" ? (
-				<h2> ˙◠˙</h2>
-			) : (
-				<>
-					<h2>We're here!</h2>{" "}
-					<ul>
-						{people.map((person, key) => (
-							<div key={key}>{person}</div>
-						))}
-					</ul>
-				</>
-			)}
-			<div className="card">
-				<button onClick={() => setCurrentCountry("")}>Add a contact</button>
 			</div>
 		</>
 	);

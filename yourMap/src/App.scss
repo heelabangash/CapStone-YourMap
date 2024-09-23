@@ -1,7 +1,10 @@
+@use "../src/styles/partials/variables" as *;
+
 body {
 	display: flex;
 	flex-direction: column;
 	margin: 0;
+	color: $text-dark;
 }
 
 #root {
@@ -51,15 +54,12 @@ path {
 .logos {
 	display: flex;
 	flex-direction: column;
-	// gap: 0.5rem;
 }
 
 .logo {
 	margin: 0;
 	height: 1rem;
 
-	/* height: 6em; */
-	/* padding: 1.5em; */
 	will-change: filter;
 	transition: filter 300ms;
 }

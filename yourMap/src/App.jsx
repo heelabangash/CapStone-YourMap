@@ -1,9 +1,8 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.scss";
 
 import Map from "./components/Map/Map";
+import Persons from "./components/Persons/Persons";
 
 function App() {
 	const [currentCountry, setCurrentCountry] = useState("");
@@ -35,8 +34,8 @@ function App() {
 				currentCountry={currentCountry}
 				setCurrentCountry={setCurrentCountry}
 			></Map>
-
-			<div className="card">placeholder navbar</div>
+			<Persons currentCountry={currentCountry}></Persons>
+			{/* <div className="card">placeholder navbar</div> */}
 		</>
 	);
 }
