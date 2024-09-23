@@ -21,7 +21,7 @@
 
 .map {
 	position: relative;
-	border: 5px dotted $secondary-color;
+	// border: 5px dotted $secondary-color;
 }
 
 .map__options {
@@ -41,8 +41,9 @@
 .map__container {
 	width: 90vw;
 	height: 50vw;
-	border: 0.1rem solid $secondary-color;
+	border: 0.1rem dashed $secondary-color;
 	border-radius: 40rem;
+	cursor: grab;
 }
 
 rect {
@@ -51,11 +52,14 @@ rect {
 
 .country {
 	fill: $secondary-highlight;
-	cursor: pointer;
+	cursor: zoom-in;
 }
 
 .country:hover {
 	fill: $primary-highlight;
+}
+.country:active {
+	cursor: pointer;
 }
 
 .--active {

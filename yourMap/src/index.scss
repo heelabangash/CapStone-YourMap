@@ -38,13 +38,14 @@ h1 {
 	color: #71e05a;
 }
 
+input,
 button {
+	margin: 0.25rem 0;
 	height: 2.5rem;
 	background-color: #fbeee0;
 	border: 2px solid $primary-color;
 	box-shadow: $primary-color 4px 4px 0 0;
 	color: $text-dark;
-	cursor: pointer;
 	display: inline-block;
 	font-weight: 600;
 	font-size: 18px;
@@ -57,9 +58,13 @@ button {
 	touch-action: manipulation;
 	border-radius: 0.25rem;
 }
+
+input:hover,
 button:hover {
 	color: $secondary-color;
 }
+
+input:active,
 button:active {
 	box-shadow: $primary-color 2px 2px 0 0;
 	transform: translate(2px, 2px);

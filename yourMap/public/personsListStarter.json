@@ -1,0 +1,10 @@
+{
+	"persons": {
+		"countries": [
+			{
+				"id": "CAD",
+				"persons": [{ "name": "Waldo" }]
+			}
+		]
+	}
+}
