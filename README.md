@@ -1,3 +1,16 @@
+### To Run
+
+Clone the repository
+- cd into yourMap folder
+    - npm install
+    - npm run dev
+ 
+- open a new terminal
+- cd into yourMapApi folder
+    -npm install
+    -node index.js
+
+
 # CapStone-YourMap
 
 Capstone BrainStation
@@ -88,3 +101,10 @@ Scope your project as a sprint. Break down the tasks that will need to be comple
 
 Implement suggestions for what you can do in each location, with drag and drop or add to + capability to your lists.
 Implement being able to share lists across users.
+
+### Scope ( Future implementations 2) 
+
+Scope was discussed and cut down quite a bit -> only a list for people you know, no continents/cities option
+
+
+
