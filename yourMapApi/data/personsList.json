@@ -28,7 +28,9 @@
 					{ "name": "David" },
 					{ "name": "Sasha" }
 				]
-			}
+			},
+			{ "name": "Morocco", "persons": [{ "name": "adad" }] },
+			{ "name": "Kazakhstan", "persons": [{ "name": "feroza" }] }
 		]
 	}
 }
