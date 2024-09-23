@@ -25,6 +25,17 @@ function Persons({ currentCountry }) {
 		}
 	};
 
+	const addPerson = async () => {
+		try {
+			const response = await axios.post(`http://localhost:8080/persons`);
+			setData(response.data);
+			return response.data;
+		} catch (err) {
+			console.error("Error fetching persons", err);
+			return null;
+		}
+	};
+
 	useEffect(() => {
 		const loadPersons = async () => {
 			try {
@@ -55,10 +66,16 @@ function Persons({ currentCountry }) {
 		loadPersons();
 	}, [currentCountry]);
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 		console.log(e.target.name.value);
-		//add person to json here
+
+		let body = e.target.name.value;
+		try {
+			await axios.post(`http://localhost:8080/persons/`, body);
+		} catch (error) {
+			console.error("Error adding person:", error);
+		}
 	};
 
 	listPersons = data?.persons?.countries?.find(
