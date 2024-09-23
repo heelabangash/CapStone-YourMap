@@ -1,0 +1,45 @@
+@use "../../styles/partials/variables" as *;
+
+.person-list {
+	margin-top: -4rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	width: 100%;
+}
+
+.person-list__persons {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.person {
+	width: 18rem;
+	margin: 0.25rem 0;
+	height: 2.5rem;
+	background-color: #fbeee0;
+	border: 2px solid $primary-color;
+	box-shadow: $primary-color 4px 4px 0 0;
+	color: $text-dark;
+	display: inline-block;
+	font-weight: 600;
+	font-size: 18px;
+	padding: 0 18px;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	border-radius: 0.25rem;
+}
+
+.name-label {
+	font-weight: 700;
+	color: $text-dark;
+}
+
+.card {
+	padding-bottom: 1rem;
+}

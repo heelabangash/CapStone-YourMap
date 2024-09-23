@@ -1,0 +1,32 @@
+{
+	"persons": {
+		"countries": [
+			{
+				"name": "Canada",
+				"persons": [
+					{ "name": "Alicia" },
+					{ "name": "Katarina" },
+					{ "name": "Emma" },
+					{ "name": "Justin" },
+					{ "name": "Mingxia" },
+					{ "name": "Waldo" },
+					{ "name": "Henry" },
+					{ "name": "Fateme" },
+					{ "name": "Kayla" },
+					{ "name": "Jon" },
+					{ "name": "Tami" },
+					{ "name": "Chelsea" },
+					{ "name": "Kristina" }
+				]
+			},
+			[
+				{ "name": "Lena" },
+				{ "name": "Valentin" },
+				{ "name": "Masha" },
+				{ "name": "David" },
+				{ "name": "Sasha" },
+				{ "name": "blue" }
+			]
+		]
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"persons": {
+		"countries": [
+			{
+				"name": "Canada",
+				"persons": [{ "name": "Waldo" }]
+			},
+			{
+				"name": "Russia",
+				"persons": [{ "name": "Evan" }]
+			}
+		]
+	}
+}
