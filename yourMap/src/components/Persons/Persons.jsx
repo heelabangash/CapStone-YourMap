@@ -48,10 +48,11 @@ function Persons({ currentCountry }) {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		console.log(e.target.name.value);
 		listPersons
 			? listPersons.push({ name: e.target.name.value })
 			: (listPersons = [{ name: e.target.name.value }]);
+		console.log(listPersons);
+
 		let body = {
 			name: currentCountry,
 			persons: listPersons,
