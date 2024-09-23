@@ -9,7 +9,7 @@ you want to see there as a list, like national monuments, tourist attractions et
 
 ### Problem Space
 
-Our networks of riends and family are distributed all over the world today. It is hard to keep track of in your brain. This app will help you keep track of who you know where. It doubles as a travel bucketlist for things you can do when/if you visit them.
+Our networks of friends and family are distributed all over the world today. It is hard to keep track of in your brain. This app will help you keep track of who you know where. It doubles as a travel bucketlist for things you can do when/if you visit them.
 
 ### User Profile
 
@@ -23,9 +23,13 @@ TBD
 ### Features
 
 -A map or globe visual with capabilities to select continents, countries, and cities. This may involve a zoom feature.
+
 -Lists associated with continents, countries, and cities.
+
 -Persistent storage.
+
 -Also see User Profile for Sonia.
+
 
 ## Implementation
 
@@ -39,6 +43,8 @@ React.
 Possibly mySQL.
 
 And TBD
+Libraries
+**-react-simple-maps **
 
 ### APIs
 
@@ -46,7 +52,7 @@ API for potential top visited tourist attractions. (Needs research)
 
 ### Sitemap
 
-Welcome/Login - Spalsh page, welcome. Option to login.
+Welcome/Login - Splash page, welcome. Option to login.
 
 Map page - a visual view of your map, where you can select, continents, countries, or cities.
 
@@ -55,8 +61,9 @@ Your lists - A list of all your lists, searchable, by continent, country, city.
 List - List group related to continent, country city.
 
 ### Mockups
+![Mockup-v1](https://github.com/user-attachments/assets/c234ccc2-c6f6-4e39-a3cd-cfe25d3ed1fb)
 
-TBD
+TBD - Need to upload paper drawings.
 Provide visuals of your app's screens. You can use pictures of hand-drawn sketches, or wireframing tools like Figma.
 
 ### Data
@@ -80,3 +87,4 @@ Scope your project as a sprint. Break down the tasks that will need to be comple
 ## Future Implementations
 
 Implement suggestions for what you can do in each location, with drag and drop or add to + capability to your lists.
+Implement being able to share lists across users.
