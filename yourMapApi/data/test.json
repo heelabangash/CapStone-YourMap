@@ -19,18 +19,14 @@
 					{ "name": "Kristina" }
 				]
 			},
-			{
-				"name": "Russia",
-				"persons": [
-					{ "name": "Lena" },
-					{ "name": "Valentin" },
-					{ "name": "Masha" },
-					{ "name": "David" },
-					{ "name": "Sasha" }
-				]
-			},
-			{ "name": "Morocco", "persons": [{ "name": "adad" }] },
-			{ "name": "Kazakhstan", "persons": [{ "name": "feroza" }] }
+			[
+				{ "name": "Lena" },
+				{ "name": "Valentin" },
+				{ "name": "Masha" },
+				{ "name": "David" },
+				{ "name": "Sasha" },
+				{ "name": "blue" }
+			]
 		]
 	}
 }

@@ -25,57 +25,43 @@ function Persons({ currentCountry }) {
 		}
 	};
 
-	const addPerson = async () => {
+	const loadPersons = async () => {
 		try {
-			const response = await axios.post(`http://localhost:8080/persons`);
-			setData(response.data);
-			return response.data;
+			const personsDetails = await fetchPersons();
+			if (personsDetails) {
+				setData(personsDetails);
+
+				personExists = personsDetails.persons.countries.find(
+					(element) => element.name === currentCountry
+				);
+
+				listPersons = personExists ? personExists.persons : [];
+			}
 		} catch (err) {
-			console.error("Error fetching persons", err);
-			return null;
+			console.error("Error fetching persons:", err);
 		}
 	};
 
 	useEffect(() => {
-		const loadPersons = async () => {
-			try {
-				const personsDetails = await fetchPersons();
-				if (personsDetails) {
-					console.log(personsDetails.persons.countries);
-					setData(personsDetails);
-
-					personExists = personsDetails.persons.countries.find(
-						(element) => element.name === currentCountry
-					);
-
-					listPersons = personExists ? personExists.persons : "";
-					// personExists
-					// 	? (listPersons = personExists.persons)
-					// 	: (listPersons = "");
-					// setData((prevData) => ({
-					// 	...prevData,
-					// 	listPersons: listPersons, // Store the list of persons in the state
-					// 	personExists: personExists, // Store personExists in the state if needed
-					// }));
-				}
-			} catch (err) {
-				console.error("Error fetching persons:", err);
-			}
-		};
-
 		loadPersons();
 	}, [currentCountry]);
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		console.log(e.target.name.value);
-
-		let body = e.target.name.value;
+		listPersons
+			? listPersons.push({ name: e.target.name.value })
+			: (listPersons = [{ name: e.target.name.value }]);
+		let body = {
+			name: currentCountry,
+			persons: listPersons,
+		};
 		try {
 			await axios.post(`http://localhost:8080/persons/`, body);
 		} catch (error) {
 			console.error("Error adding person:", error);
 		}
+		loadPersons();
 	};
 
 	listPersons = data?.persons?.countries?.find(
