@@ -31,14 +31,7 @@ function Map({ currentCountry, setCurrentCountry }) {
 	const [people, selectPeople] = useState(["Alicia, Katarina, Tami"]);
 	const [flag, setFlag] = useState(false);
 	const selectCountry = (geo) => {
-		// alert(geo.id);
-		// console.log(geo);
-		// console.log(geo);
-		// console.log(geo.properties.name);
-		// console.log(geo.geometry.coordinates);
 		setCurrentCountry(geo.properties.name);
-		// console.log(flag);
-		// alert(geo.properties.name);
 		flag
 			? selectPeople(["Justin, Henry, Emma"])
 			: selectPeople(["Jenani, Mingxia, Heela"]);
@@ -90,8 +83,6 @@ function Map({ currentCountry, setCurrentCountry }) {
 					className="map__container"
 					projection="geoEqualEarth"
 					projectionConfig={{
-						// rotate: [-10.0, -52.0, 0],
-						// center: [2, 46],
 						scale: 150,
 					}}
 				>
@@ -105,44 +96,23 @@ function Map({ currentCountry, setCurrentCountry }) {
 					>
 						<Geographies className="map" geography="/features.json">
 							{({ geographies }) =>
-								geographies.map(
-									(geo) => (
-										// <div key={geo.rsmKey}>
-										// console.log(geo.rsmKey) || (
-										<Geography
-											className={
-												geo.properties.name == currentCountry
-													? "--active"
-													: "country"
-											}
-											key={geo.rsmKey}
-											geography={geo}
-											fill="#F6F0E9"
-											onClick={() => selectCountry(geo)}
-											onMouseEnter={() => showCountry(geo)}
-											onMouseLeave={() => hideCountry()}
-										/>
-									)
-									// {geo.id === currentCountry ? "url('#lines')" :
-									// )
-									// </div>
-								)
+								geographies.map((geo) => (
+									<Geography
+										className={
+											geo.properties.name == currentCountry
+												? "--active"
+												: "country"
+										}
+										key={geo.rsmKey}
+										geography={geo}
+										fill="#F6F0E9"
+										onClick={() => selectCountry(geo)}
+										onMouseEnter={() => showCountry(geo)}
+										onMouseLeave={() => hideCountry()}
+									/>
+								))
 							}
 						</Geographies>
-						{/* <Annotation
-					subject={[2.3522, 48.8566]}
-					dx={-90}
-					dy={-30}
-					connectorProps={{
-						stroke: "#FF5533",
-						strokeWidth: 3,
-						strokeLinecap: "round",
-					}}
-				>
-					<text x="-8" textAnchor="end" alignmentBaseline="middle" fill="#F53">
-						{"Paris"}
-					</text>
-				</Annotation> */}
 					</ZoomableGroup>
 				</ComposableMap>
 			</div>
