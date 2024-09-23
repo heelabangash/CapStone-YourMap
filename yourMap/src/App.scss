@@ -1,0 +1,88 @@
+body {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	padding: 0;
+	text-align: center;
+}
+
+html {
+	font-family: system-ui, sans-serif;
+	font-size: 1.25rem;
+}
+
+svg {
+	display: inline-block;
+	vertical-align: middle;
+	stroke: #c04fab;
+	stroke-width: 0.2px;
+}
+
+path {
+	fill: #2a354d;
+}
+
+.App {
+	font-family: sans-serif;
+	text-align: center;
+}
+.app-logo {
+	padding: 0 0 1rem 0;
+	margin: 0;
+}
+
+.title {
+	box-sizing: border-box;
+	width: inherit;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+}
+
+.logos {
+	display: flex;
+	flex-direction: column;
+	// gap: 0.5rem;
+}
+
+.logo {
+	margin: 0;
+	height: 1rem;
+
+	/* height: 6em; */
+	/* padding: 1.5em; */
+	will-change: filter;
+	transition: filter 300ms;
+}
+
+.logo:hover {
+	filter: drop-shadow(0 0 2em #05e109);
+}
+
+.logo.react:hover {
+	filter: drop-shadow(0 0 4em #d01dc1);
+}
+
+@keyframes logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	a:nth-of-type(2) .logo {
+		animation: logo-spin infinite 20s linear;
+	}
+}

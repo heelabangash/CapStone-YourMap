@@ -1,0 +1,67 @@
+@use "../../styles/partials/variables" as *;
+
+.country-label {
+	position: absolute;
+	top: 5rem;
+	right: 0;
+	margin: auto;
+	z-index: 2;
+	display: inline-block;
+	padding: 0.3 0.3;
+	margin: 0 0.3rem 0.3rem 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	border: none;
+	background-color: rgba(202, 233, 200, 0.567);
+	border-radius: 0.25rem;
+	color: $secondary-color;
+}
+
+.map {
+	position: relative;
+	border: 5px dotted $secondary-color;
+}
+
+.map__options {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1.75rem;
+	padding: 0 0 0.25rem;
+}
+
+.map__buttons {
+	display: flex;
+	justify-content: space-between;
+	width: 50vw;
+}
+
+.map__container {
+	width: 90vw;
+	height: 50vw;
+	border: 0.1rem solid $secondary-color;
+	border-radius: 40rem;
+}
+
+rect {
+	stroke: #ffffff;
+}
+
+.country {
+	fill: $secondary-highlight;
+	cursor: pointer;
+}
+
+.country:hover {
+	fill: $primary-highlight;
+}
+
+.--active {
+	fill: $primary-color;
+}
+
+.--active:hover {
+	fill: $primary-color;
+}
