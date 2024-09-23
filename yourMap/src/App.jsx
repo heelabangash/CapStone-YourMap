@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.scss";
+
+import Map from "./components/Map/Map";
 
 function App() {
-  const [count, setCount] = useState(0)
+	const [currentCountry, setCurrentCountry] = useState("");
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+	// const [people, selectPeople] = useState(["Alicia, Katarina, Tami"]);
+	// const [flag, setFlag] = useState(false);
+	// const selectCountry = (geo) => {
+	// 	// alert(geo.id);
+	// 	// console.log(geo);
+	// 	console.log(geo);
+	// 	console.log(geo.properties.name);
+	// 	// console.log(geo.geometry.coordinates);
+	// 	setCurrentCountry(geo.properties.name);
+	// 	console.log(flag);
+	// 	// alert(geo.properties.name);
+	// 	flag
+	// 		? selectPeople(["Justin, Henry, Emma"])
+	// 		: selectPeople(["Jenani, Mingxia, Heela"]);
+	// 	setFlag(!flag);
+	// 	if (geo.id == "BRA" || geo.id == "AUS") {
+	// 		selectPeople(["none"]);
+	// 	}
+	// };
+
+	return (
+		<>
+			<Map
+				className="map-container"
+				currentCountry={currentCountry}
+				setCurrentCountry={setCurrentCountry}
+			></Map>
+
+			<div className="card">placeholder navbar</div>
+		</>
+	);
 }
 
-export default App
+export default App;

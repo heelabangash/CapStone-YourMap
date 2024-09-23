@@ -14,6 +14,7 @@ Our networks of riends and family are distributed all over the world today. It i
 ### User Profile
 
 User 1 - Sonia
+
 Sonia has a bestfriend she hasn't seen for 6 years. Her bestfriend Rebecca has a job in which she travels around every few years within the UK. Sonia jots down where her friend is in the yourmap map when she has the chance and references it instead of having to remember. Sonia wants to visit Rebecca in Scotland. She makes a list for Scotland, this list includes travel necessities. Sonia makes a list for Edinbrugh, Aberdeen, and Glasgow, for sites she wants to see when she visits those cities.
 
 #Add any special considerations that your app must take into account.
