@@ -7,8 +7,8 @@ Clone the repository
  
 - open a new terminal
 - cd into yourMapApi folder
-    -npm install
-    -node index.js
+    - npm install
+    - node index.js
 
 
 # CapStone-YourMap
